@@ -5,7 +5,6 @@ import Link from '../Link'
 
 export default function Navbar() {
   return (
-    <header>
         <nav className='bg-slate-400 flex justify-around items-center'>
             <div> 
                 <ul className='list-none flex'>
@@ -22,9 +21,8 @@ export default function Navbar() {
             </div>
             {/* Menu */}
             <div>
-                <Image src='./logo.svg' width={100} height={100} alt='Imagem do logo' />
+                <Image src='/logo.svg' width={100} height={100} alt='Imagem do logo' />
             </div>
         </nav>
-    </header>
     )
 }

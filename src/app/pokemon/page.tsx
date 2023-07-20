@@ -1,3 +1,4 @@
+import Filtro from '@/components/Filtro';
 import Link from '@/components/Link';
 import ListaCard from '@/components/ListCard';
 import { getData } from '@/data/services/busca-dados';
@@ -30,7 +31,8 @@ export default async function page() {
   // criar state para controlar a paginação
   return (
     <>
-      <div>
+    {/* <Filtro /> */}
+      <div className='w-full p-10 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white'>
         <ListaCard 
           lista={listaDePokemon}
         />

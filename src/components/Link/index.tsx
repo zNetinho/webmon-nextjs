@@ -5,11 +5,15 @@ import PropTypes from 'prop-types';
 interface Props {
   href: string,
   textAnchor: string,
+  styleClass?: string,
 }
 
-export default function Link({href, textAnchor}: Props) {
+export default function Link({href, textAnchor, styleClass,}: Props) {
   return (
-    <NextLink href={href}>
+    <NextLink 
+      href={href}
+      className={styleClass}
+    >
       {textAnchor}
     </NextLink>
   )
