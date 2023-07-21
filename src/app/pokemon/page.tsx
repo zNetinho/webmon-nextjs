@@ -10,10 +10,10 @@ async function getStaticProps() {
   const listaDePokemon = await Promise.all(data.map(async(pokemon: any) => {
     const responseApi = await fetch(pokemon.url);
 
-    if(!responseApi) {
+    if(!responseApi.ok) {
       throw new Error('Erro ao carregar os detalhes do pokemon')
     }
-
+    console.log(responseApi)
     const detailsPokemon = await responseApi.json();
     return {
       name: detailsPokemon.name,

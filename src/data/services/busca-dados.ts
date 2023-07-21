@@ -1,5 +1,3 @@
-import { Pokemon } from "../@types/IPokemon";
-
 export async function getData() {
 
   const MaxPokemons = 20
@@ -9,6 +7,7 @@ export async function getData() {
     throw new Error("Por favor consulte um especialista")
   }
   const dataResolved = await data.json();
+  console.log(dataResolved)
   
   const response_api = dataResolved.results;
 
@@ -16,7 +15,6 @@ export async function getData() {
 
 }
 export async function buscaPokemon(id: number) {
-  debugger
   const URL_API = `https://pokeapi.co/api/v2/pokemon/${id}`
   const pokemonClicado = await fetch(URL_API);
   if(!pokemonClicado.ok) {
