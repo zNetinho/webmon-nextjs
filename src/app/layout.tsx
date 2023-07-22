@@ -1,8 +1,6 @@
 import MainContainer from '@/components/MainContainer'
 import './globals.css'
 import type { Metadata } from 'next'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Webmon - next.js 13',
@@ -16,11 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-      <Navbar />
+      <MainContainer>
         {children}
-      </body>
-      <Footer />
+      </MainContainer>
+
     </html>
   )
 }

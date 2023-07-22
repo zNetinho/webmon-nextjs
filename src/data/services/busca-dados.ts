@@ -1,5 +1,4 @@
 export async function getData() {
-
   const MaxPokemons = 20
   const URL_API = 'https://pokeapi.co/api/v2/pokemon?limit='
   const data = await fetch(`${URL_API}${MaxPokemons}`);
@@ -7,7 +6,6 @@ export async function getData() {
     throw new Error("Por favor consulte um especialista")
   }
   const dataResolved = await data.json();
-  console.log(dataResolved)
   
   const response_api = dataResolved.results;
 
@@ -23,7 +21,6 @@ export async function buscaPokemon(id: number) {
 
   const result = await pokemonClicado.json();
   const pokemon = result.id === id ? result : null;
-  console.log(pokemon)
 
   return result;
 
