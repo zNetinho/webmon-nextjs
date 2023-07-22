@@ -13,7 +13,7 @@ async function getStaticProps() {
     if(!responseApi.ok) {
       throw new Error('Erro ao carregar os detalhes do pokemon')
     }
-    console.log(responseApi)
+    
     const detailsPokemon = await responseApi.json();
     return {
       name: detailsPokemon.name,
