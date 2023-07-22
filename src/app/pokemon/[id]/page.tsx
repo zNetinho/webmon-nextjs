@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useEffect, useState } from "react";
 import { buscaPokemon } from "@/data/services/busca-dados";
@@ -29,8 +29,8 @@ export default function SingleView() {
 
   return (
     <div className="m-w-3/4 flex justify-center">
-      <div className="w-2/4 flex flex-col">
-        <div>
+      <div className="w-2/4 flex flex-col items-end mr-10">
+        <div className="">
           <ImageComponent
             src={poke.sprites.front_default}
             width={200}
@@ -42,25 +42,19 @@ export default function SingleView() {
           </TitleSection>
         </div>
         <div className="flex flex-col flex-wrap">
-        <TitleSection>
-            Habilidades
-          </TitleSection>
-          <ListSkills 
-            poke={poke}
-          />
+          <ListTypes poke={poke} title="Tipo"  />
           <p>
             O peso desse pokemon e de {poke.weight} Kl
           </p>
         </div>
       </div>
-      <div className="flex">
-        <ListTypes 
-          poke={poke}
+      <div className="flex w-2/4">
+        <ListSkills
+         title="Habilidades"
+         poke={poke}
         />
         <div>
-          <ListStatus
-            poke={poke}
-          />
+          <ListStatus poke={poke} title="Status"/>
         </div>
       </div>
     </div>

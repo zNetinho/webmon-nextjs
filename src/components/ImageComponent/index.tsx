@@ -14,13 +14,9 @@ export default function ImageComponent({src, alt, width, height}: ImageComponent
   )
 }
 
-ImageComponent.defaultProps = {
-  alt: 'Foto de um pokemon desconhecido'
-}
-
 ImageComponent.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string,
+  alt: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
 }

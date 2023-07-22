@@ -1,7 +1,5 @@
 export const services = {
-  capitalizeFirstLetter: (pokemon: any ) => {
-    console.log(pokemon)
-
+  toCapitalize: (pokemon: any ) => {
     return pokemon.charAt(0).toUpperCase() + pokemon.slice(1)
   }
 }
